@@ -1,0 +1,35 @@
+{
+  "author": "David Warring",
+  "build-depends": [
+  ],
+  "depends": [
+    "IETF::RFC_Grammar::URI",
+    "PDF::API6:ver<0.2.5+>",
+    "PDF::Content:ver<0.9.6+>",
+    "PDF::Class:ver<0.4.18+>",
+    "PDF::Tags:ver<0.0.17+>",
+    "CSS::Properties:ver<0.9.7+>",
+    "CSS::TagSet:ver<0.1.2+>",
+    "File::Temp",
+    "URI"
+  ],
+  "description": "Simple PDF Tag based renderer",
+  "license": "Artistic-2.0",
+    "name": "PDF::Tags::Writer",
+  "provides": {
+    "PDF::Tags::Writer": "lib/PDF/Tags/Writer.rakumod",
+    "PDF::Tags::Writer::Outlines": "lib/PDF/Tags/Writer/Outlines.rakumod",
+    "PDF::Tags::Writer::Style": "lib/PDF/Tags/Writer/Style.rakumod",
+    "PDF::Tags::Writer::AST": "lib/PDF/Tags/Writer/AST.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "git://github.com/pdf-raku/PDF-Tags-Writer-raku.git",
+  "tags": [
+    "pdf",
+    "pod"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}
