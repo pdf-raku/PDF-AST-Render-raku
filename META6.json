@@ -13,7 +13,7 @@
     "File::Temp",
     "URI"
   ],
-  "description": "Simple PDF Tag based renderer",
+  "description": "Simple PDF Tags based renderer",
   "license": "Artistic-2.0",
     "name": "PDF::Tags::Writer",
   "provides": {
