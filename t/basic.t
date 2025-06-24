@@ -1,16 +1,13 @@
 use Test;
-use PDF::Tags;
 use PDF::Tags::Writer;
 use PDF::API6;
-use PDF::Tags;
-use PDF::Tags::Elem;
-use CSS::TagSet::TaggedPDF;
 
 plan 1;
 
 my Pair:D $doc-ast =
     :Document[
              :Lang<en>,
+             :H1["A basic Test Document"],
              :P["This text is of ", :Span[:TextDecorationType("Underline"), "minor significance"], "."],
              :P["This text is of ", :Em["major significance"], "."],
              :P["This text is of ", :Strong["fundamental significance"], "."],
@@ -20,13 +17,10 @@ my Pair:D $doc-ast =
              :P["This text contains a link with label to ", :Link[:href("http://www.google.com/"), "google"], "."],
 
              "#comment" => " a real-world sample, taken from Supply.pod6 ",
-             :P["A tap on an ", :Code["on demand"], " supply will initiate the production of values, and tapping the supply again may result in a new set of values. For example, ", :Code["Supply.interval"], " produces a fresh timer with the appropriate interval each time it is tapped. If the tap is closed, the timer simply stops emitting values to that tap."],
+             :P["A tap on an ", :Code[:Span[ :role<Index>, "on demand"]], " supply will initiate the production of values, and tapping the supply again may result in a new set of values. For example, ", :Code[:Span[ :role<Index>, "Supply.interval"]], " produces a fresh timer with the appropriate interval each time it is tapped. If the tap is closed, the timer simply stops emitting values to that tap."],
          ];
 
-my PDF::Tags::Writer $renderer .= new;
-my PDF::Tags::Writer::AST $writer = $renderer.writer;
-my Pair:D @content = $writer.process-root(|$doc-ast);
-$writer.write-batch(@content, $renderer.root);
+my PDF::API6 $pdf = PDF::Tags::Writer.render($doc-ast);
 
-lives-ok { $renderer.pdf.save-as: "t/basic.pdf" };
+lives-ok { $pdf.save-as: "t/basic.pdf" };
 

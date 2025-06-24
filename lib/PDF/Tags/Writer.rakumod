@@ -105,11 +105,13 @@ method !paginate(
     }
 }
 
-method merge-batch( % ( :@toc!, :%index!, :$frag!, :%info!, |c ) ) {
+method merge-batch( % ( :@toc!, :%index!, :$frag, :%info, |c ) ) {
     @.toc.append: @toc;
     %.index ,= %index;
-    for $frag.kids -> $node {
-        $.root.add-kid: :$node;
+    with $frag {
+        for .kids -> $node {
+            $.root.add-kid: :$node;
+        }
     }
     if %info {
         my $pdf-info = ($!pdf.Info //= {});
@@ -146,3 +148,18 @@ sub categorize-alphabetically(%index) {
 }
 
 method lang is rw { $!pdf.catalog.Lang; }
+
+multi method render(::?CLASS:U: Pair:D $doc-ast, |c) {
+    self.new(|c).render($doc-ast);
+}
+
+multi method render(::?CLASS:D: Pair:D $doc-ast, Bool :$index = True) {
+    my PDF::Tags::Writer::AST $writer = self.writer;
+    my Pair:D @content = $writer.process-root(|$doc-ast);
+    $writer.write-batch(@content, $!root);
+    my %index = $writer.index;
+    my @toc = $writer.toc;
+    $.merge-batch: %( :@toc, :%index, );
+    $.build-index if $index && %index;
+    $.pdf;
+}

@@ -2,7 +2,7 @@
 %¥±ë¼
 1 0 obj
 <<
-  /CreationDate (D:20250625075122+12'00')
+  /CreationDate (D:20250625083452+12'00')
   /Creator (PDF::Class-0.5.22; PDF::Content-0.9.6; PDF-0.6.11; Raku-6.d; PDF::Tags-0.2.0; PDF::Tags::Writer-v0)
   /Producer (PDF::API6-0.2.8)
 >>
@@ -11,15 +11,21 @@ endobj
 2 0 obj
 <<
   /Type /Catalog
+  /Dests 3 0 R
   /Lang (en)
   /MarkInfo << /Marked true >>
-  /Pages 3 0 R
-  /StructTreeRoot 14 0 R
+  /Outlines 15 0 R
+  /Pages 10 0 R
+  /StructTreeRoot 43 0 R
 >>
 endobj
 
 3 0 obj
-<< /Type /Pages /Count 1 /Kids [ 4 0 R ] /MediaBox [ 0 0 612 792 ] >>
+<<
+  /A_basic_Test_Document [ 4 0 R /FitBH 756 ]
+  /Supply.interval [ 4 0 R /FitBH 498.24 ]
+  /on_demand [ 4 0 R /FitBH 511.44 ]
+>>
 endobj
 
 4 0 obj
@@ -27,8 +33,8 @@ endobj
   /Type /Page
   /Annots [ 5 0 R 7 0 R ]
   /Contents 9 0 R
-  /Parent 3 0 R
-  /Resources << /Font << /F1 10 0 R /F2 11 0 R /F3 12 0 R /F4 13 0 R >> >>
+  /Parent 10 0 R
+  /Resources << /Font << /F1 11 0 R /F2 12 0 R /F3 13 0 R /F4 14 0 R >> >>
   /StructParents 0
 >>
 endobj
@@ -41,7 +47,7 @@ endobj
   /Border [ 0 0 0 ]
   /Contents (http://www.google.com/)
   /P 4 0 R
-  /Rect [ 148.488 591.52 269.044 606.72 ]
+  /Rect [ 148.488 562 269.044 577.2 ]
   /StructParent 1
 >>
 endobj
@@ -58,7 +64,7 @@ endobj
   /Border [ 0 0 0 ]
   /Contents (google)
   /P 4 0 R
-  /Rect [ 199.152 564.64 235.816 579.84 ]
+  /Rect [ 199.152 535.12 235.816 550.32 ]
   /StructParent 2
 >>
 endobj
@@ -68,184 +74,197 @@ endobj
 endobj
 
 9 0 obj
-<< /Length 3116 >> stream
-/P << /MCID 0 >> BDC
+<< /Length 3296 >> stream
+/H1 << /MCID 0 >> BDC
   BT
     1 0 0 1 20 756 Tm
-    /F1 12 Tf
+    /F1 24 Tf
+    [ (A basic T) 92 (est Document) ] TJ
+  ET
+  q
+    1.2 w
+    20 753.6 m
+    254.432 753.6 l
+    S
+  Q
+EMC
+/P << /MCID 1 >> BDC
+  BT
+    1 0 0 1 20 726.48 Tm
+    /F2 12 Tf
     [ (This te) 15 (xt is of ) ] TJ
   ET
 EMC
-/Span << /MCID 1 >> BDC
+/Span << /MCID 2 >> BDC
   BT
-    1 0 0 1 20 756 Tm
+    1 0 0 1 20 726.48 Tm
     [ -5763 (minor signif) 20 (icance) ] TJ
   ET
   q
     0.6 w
-    89.156 754.8 m
-    178.568 754.8 l
+    89.156 725.28 m
+    178.568 725.28 l
     S
   Q
 EMC
-/P << /MCID 2 >> BDC
+/P << /MCID 3 >> BDC
   BT
-    1 0 0 1 20 756 Tm
+    1 0 0 1 20 726.48 Tm
     [ -13214 (.) ] TJ
   ET
 EMC
-/P << /MCID 3 >> BDC
+/P << /MCID 4 >> BDC
   BT
-    1 0 0 1 20 729.12 Tm
+    1 0 0 1 20 699.6 Tm
     [ (This te) 15 (xt is of ) ] TJ
   ET
 EMC
-/Em << /MCID 4 >> BDC
+/Em << /MCID 5 >> BDC
   BT
-    1 0 0 1 20 729.12 Tm
-    /F2 12 Tf
+    1 0 0 1 20 699.6 Tm
+    /F3 12 Tf
     [ -5763 (major signif) 20 (icance) ] TJ
-  ET
-EMC
-/P << /MCID 5 >> BDC
-  BT
-    1 0 0 1 20 729.12 Tm
-    /F1 12 Tf
-    [ -13215 (.) ] TJ
   ET
 EMC
 /P << /MCID 6 >> BDC
   BT
-    1 0 0 1 20 702.24 Tm
+    1 0 0 1 20 699.6 Tm
+    /F2 12 Tf
+    [ -13215 (.) ] TJ
+  ET
+EMC
+/P << /MCID 7 >> BDC
+  BT
+    1 0 0 1 20 672.72 Tm
     [ (This te) 15 (xt is of ) ] TJ
   ET
 EMC
-/Strong << /MCID 7 >> BDC
+/Strong << /MCID 8 >> BDC
   BT
-    1 0 0 1 20 702.24 Tm
-    /F3 12 Tf
-    [ -5763 (fundamental signif) 25 (icance) ] TJ
-  ET
-EMC
-/P << /MCID 8 >> BDC
-  BT
-    1 0 0 1 20 702.24 Tm
+    1 0 0 1 20 672.72 Tm
     /F1 12 Tf
-    [ -16433 (.) ] TJ
+    [ -5763 (fundamental signif) 25 (icance) ] TJ
   ET
 EMC
 /P << /MCID 9 >> BDC
   BT
-    1 0 0 1 20 675.36 Tm
-    [ (This te) 15 (xt is v) 15 (erbatim C<with> B<disarmed> Z<formatting>.) ] TJ
+    1 0 0 1 20 672.72 Tm
+    /F2 12 Tf
+    [ -16433 (.) ] TJ
   ET
 EMC
 /P << /MCID 10 >> BDC
   BT
-    1 0 0 1 20 648.48 Tm
-    [ (This te) 15 (xt ) ] TJ
+    1 0 0 1 20 645.84 Tm
+    [ (This te) 15 (xt is v) 15 (erbatim C<with> B<disarmed> Z<formatting>.) ] TJ
   ET
 EMC
 /P << /MCID 11 >> BDC
   BT
-    1 0 0 1 20 648.48 Tm
-    [ -3763 (has been replaced) ] TJ
+    1 0 0 1 20 618.96 Tm
+    [ (This te) 15 (xt ) ] TJ
   ET
 EMC
 /P << /MCID 12 >> BDC
   BT
-    1 0 0 1 20 648.48 Tm
-    [ -10871 (.) ] TJ
+    1 0 0 1 20 618.96 Tm
+    [ -3763 (has been replaced) ] TJ
   ET
 EMC
 /P << /MCID 13 >> BDC
   BT
-    1 0 0 1 20 621.6 Tm
-    [ (This te) 15 (xt is ) ] TJ
+    1 0 0 1 20 618.96 Tm
+    [ -10871 (.) ] TJ
   ET
 EMC
 /P << /MCID 14 >> BDC
   BT
-    1 0 0 1 20 621.6 Tm
-    [ -4680 (in) 40 (visible.) ] TJ
+    1 0 0 1 20 592.08 Tm
+    [ (This te) 15 (xt is ) ] TJ
   ET
 EMC
 /P << /MCID 15 >> BDC
   BT
-    1 0 0 1 20 594.72 Tm
+    1 0 0 1 20 592.08 Tm
+    [ -4680 (in) 40 (visible.) ] TJ
+  ET
+EMC
+/P << /MCID 16 >> BDC
+  BT
+    1 0 0 1 20 565.2 Tm
     [ (This te) 15 (xt contains a link to ) ] TJ
   ET
 EMC
 q
   0 0 1 rg
-  /Link << /MCID 16 >> BDC
+  /Link << /MCID 17 >> BDC
     BT
-      1 0 0 1 20 594.72 Tm
+      1 0 0 1 20 565.2 Tm
       [ -10874 (http://www) 65 (.google.com/) ] TJ
     ET
   EMC
 Q
-/P << /MCID 17 >> BDC
+/P << /MCID 18 >> BDC
   BT
-    1 0 0 1 20 594.72 Tm
+    1 0 0 1 20 565.2 Tm
     [ -20587 (.) ] TJ
   ET
 EMC
-/P << /MCID 18 >> BDC
+/P << /MCID 19 >> BDC
   BT
-    1 0 0 1 20 567.84 Tm
+    1 0 0 1 20 538.32 Tm
     [ (This te) 15 (xt contains a link with label to ) ] TJ
   ET
 EMC
 q
   0 0 1 rg
-  /Link << /MCID 19 >> BDC
+  /Link << /MCID 20 >> BDC
     BT
-      1 0 0 1 20 567.84 Tm
+      1 0 0 1 20 538.32 Tm
       [ -15096 (google) ] TJ
     ET
   EMC
 Q
-/P << /MCID 20 >> BDC
+/P << /MCID 21 >> BDC
   BT
-    1 0 0 1 20 567.84 Tm
+    1 0 0 1 20 538.32 Tm
     [ -17818 (.) ] TJ
   ET
 EMC
-/P << /MCID 21 >> BDC
+/P << /MCID 22 >> BDC
   BT
-    1 0 0 1 20 540.96 Tm
+    1 0 0 1 20 511.44 Tm
     (A tap on an ) Tj
   ET
 EMC
-/Code << /MCID 22 >> BDC
+/Code << /MCID 23 >> BDC
   BT
-    1 0 0 1 20 540.96 Tm
+    1 0 0 1 20 511.44 Tm
     /F4 10.2 Tf
     [ -5751 (on demand) ] TJ
   ET
 EMC
-/P << /MCID 23 >> BDC
+/P << /MCID 24 >> BDC
   BT
-    1 0 0 1 20 540.96 Tm
-    /F1 12 Tf
+    1 0 0 1 20 511.44 Tm
+    /F2 12 Tf
     [ -9478 ( supply will initiate the production of v) 25 (alues, and tapping the supply ag) 5 (ain may result in a ne) 25 (w) ] TJ
     13.2 TL
     T*
     [ (set of v) 25 (alues. F) 15 (or e) 15 (xample, ) ] TJ
   ET
 EMC
-/Code << /MCID 24 >> BDC
+/Code << /MCID 25 >> BDC
   BT
-    1 0 0 1 20 527.76 Tm
+    1 0 0 1 20 498.24 Tm
     /F4 10.2 Tf
     [ -12907 (Supply.interval) ] TJ
   ET
 EMC
-/P << /MCID 25 >> BDC
+/P << /MCID 26 >> BDC
   BT
-    1 0 0 1 20 527.76 Tm
-    /F1 12 Tf
+    1 0 0 1 20 498.24 Tm
+    /F2 12 Tf
     [ -18621 ( produces a fresh timer with the appropriate interv) 25 (al each time it is) ] TJ
     T*
     [ (tapped. If the tap is closed, the timer simply stops emitting v) 25 (alues to that tap.) ] TJ
@@ -255,24 +274,10 @@ endstream
 endobj
 
 10 0 obj
-<<
-  /Type /Font
-  /Subtype /Type1
-  /BaseFont /Times-Roman
-  /Encoding /WinAnsiEncoding
->>
+<< /Type /Pages /Count 1 /Kids [ 4 0 R ] /MediaBox [ 0 0 612 792 ] >>
 endobj
 
 11 0 obj
-<<
-  /Type /Font
-  /Subtype /Type1
-  /BaseFont /Times-Italic
-  /Encoding /WinAnsiEncoding
->>
-endobj
-
-12 0 obj
 <<
   /Type /Font
   /Subtype /Type1
@@ -281,7 +286,25 @@ endobj
 >>
 endobj
 
+12 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Times-Roman
+  /Encoding /WinAnsiEncoding
+>>
+endobj
+
 13 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Times-Italic
+  /Encoding /WinAnsiEncoding
+>>
+endobj
+
+14 0 obj
 <<
   /Type /Font
   /Subtype /Type1
@@ -290,162 +313,231 @@ endobj
 >>
 endobj
 
-14 0 obj
-<<
-  /Type /StructTreeRoot
-  /K [ 15 0 R ]
-  /ParentTree <<
-    /Nums [ 0 [ 17 0 R 18 0 R 17 0 R 20 0 R 21 0 R 20 0 R 22 0 R 23 0 R 22 0 R 24 0 R 25 0 R 25 0 R 25 0 R 26 0 R 26 0 R 27 0 R 28 0 R 27 0 R 30 0 R 31 0 R 30 0 R 33 0 R 34 0 R 33 0 R 35 0 R 33 0 R ] 1 28 0 R 2 31 0 R ]
-  >>
->>
-endobj
-
 15 0 obj
-<<
-  /Type /StructElem
-  /S /Document
-  /K [ 16 0 R 17 0 R 20 0 R 22 0 R 24 0 R 25 0 R 26 0 R 27 0 R 30 0 R 33 0 R ]
-  /P 14 0 R
->>
+<< /Count 4 /First 16 0 R /Last 17 0 R >>
 endobj
 
 16 0 obj
-<< /Type /StructElem /S /Document /P 15 0 R >>
+<<
+  /Dest /A_basic_Test_Document
+  /Next 17 0 R
+  /Parent 15 0 R
+  /SE 25 0 R
+  /Title (A basic Test Document)
+>>
 endobj
 
 17 0 obj
-<< /Type /StructElem /S /P /K [ 0 18 0 R 2 ] /P 15 0 R /Pg 4 0 R >>
+<<
+  /Count 2
+  /First 18 0 R
+  /Last 19 0 R
+  /Parent 15 0 R
+  /Prev 16 0 R
+  /Title (Index)
+>>
 endobj
 
 18 0 obj
 <<
-  /Type /StructElem
-  /S /Span
-  /A << /TextDecorationType /Underline /O /Layout >>
-  /K [ 19 0 R 1 ]
-  /P 17 0 R
+  /Dest /on_demand
+  /Next 19 0 R
+  /Parent 17 0 R
+  /SE 22 0 R
+  /Title (on demand)
 >>
 endobj
 
 19 0 obj
-<< /Type /StructElem /S /Artifact /P 18 0 R >>
+<<
+  /Dest /Supply.interval
+  /Parent 17 0 R
+  /Prev 18 0 R
+  /SE 20 0 R
+  /Title (Supply.interval)
+>>
 endobj
 
 20 0 obj
-<< /Type /StructElem /S /P /K [ 3 21 0 R 5 ] /P 15 0 R /Pg 4 0 R >>
+<< /Type /StructElem /S /Code /K [ 25 ] /P 21 0 R >>
 endobj
 
 21 0 obj
-<< /Type /StructElem /S /Em /K [ 4 ] /P 20 0 R >>
-endobj
-
-22 0 obj
-<< /Type /StructElem /S /P /K [ 6 23 0 R 8 ] /P 15 0 R /Pg 4 0 R >>
-endobj
-
-23 0 obj
-<< /Type /StructElem /S /Strong /K [ 7 ] /P 22 0 R >>
-endobj
-
-24 0 obj
-<< /Type /StructElem /S /P /K [ 9 ] /P 15 0 R /Pg 4 0 R >>
-endobj
-
-25 0 obj
-<< /Type /StructElem /S /P /K [ 10 11 12 ] /P 15 0 R /Pg 4 0 R >>
-endobj
-
-26 0 obj
-<< /Type /StructElem /S /P /K [ 13 14 ] /P 15 0 R /Pg 4 0 R >>
-endobj
-
-27 0 obj
-<< /Type /StructElem /S /P /K [ 15 28 0 R 17 ] /P 15 0 R /Pg 4 0 R >>
-endobj
-
-28 0 obj
-<< /Type /StructElem /S /Link /K [ 29 0 R 16 ] /P 27 0 R >>
-endobj
-
-29 0 obj
-<< /Type /OBJR /Obj 5 0 R /Pg 4 0 R >>
-endobj
-
-30 0 obj
-<< /Type /StructElem /S /P /K [ 18 31 0 R 20 ] /P 15 0 R /Pg 4 0 R >>
-endobj
-
-31 0 obj
-<< /Type /StructElem /S /Link /K [ 32 0 R 19 ] /P 30 0 R >>
-endobj
-
-32 0 obj
-<< /Type /OBJR /Obj 7 0 R /Pg 4 0 R >>
-endobj
-
-33 0 obj
 <<
   /Type /StructElem
   /S /P
-  /K [ 21 34 0 R 23 35 0 R 25 ]
-  /P 15 0 R
+  /K [ 22 22 0 R 24 20 0 R 26 ]
+  /P 23 0 R
   /Pg 4 0 R
 >>
 endobj
 
+22 0 obj
+<< /Type /StructElem /S /Code /K [ 23 ] /P 21 0 R >>
+endobj
+
+23 0 obj
+<<
+  /Type /StructElem
+  /S /Document
+  /K [ 24 0 R 25 0 R 27 0 R 30 0 R 32 0 R 34 0 R 35 0 R 36 0 R 37 0 R 40 0 R 21 0 R ]
+  /Lang (en)
+  /P 43 0 R
+>>
+endobj
+
+24 0 obj
+<< /Type /StructElem /S /Document /P 23 0 R >>
+endobj
+
+25 0 obj
+<<
+  /Type /StructElem
+  /S /H1
+  /K [ 26 0 R 0 ]
+  /P 23 0 R
+  /Pg 4 0 R
+  /T (A basic Test Document)
+>>
+endobj
+
+26 0 obj
+<< /Type /StructElem /S /Artifact /P 25 0 R >>
+endobj
+
+27 0 obj
+<< /Type /StructElem /S /P /K [ 1 28 0 R 3 ] /P 23 0 R /Pg 4 0 R >>
+endobj
+
+28 0 obj
+<<
+  /Type /StructElem
+  /S /Span
+  /A << /TextDecorationType /Underline /O /Layout >>
+  /K [ 29 0 R 2 ]
+  /P 27 0 R
+>>
+endobj
+
+29 0 obj
+<< /Type /StructElem /S /Artifact /P 28 0 R >>
+endobj
+
+30 0 obj
+<< /Type /StructElem /S /P /K [ 4 31 0 R 6 ] /P 23 0 R /Pg 4 0 R >>
+endobj
+
+31 0 obj
+<< /Type /StructElem /S /Em /K [ 5 ] /P 30 0 R >>
+endobj
+
+32 0 obj
+<< /Type /StructElem /S /P /K [ 7 33 0 R 9 ] /P 23 0 R /Pg 4 0 R >>
+endobj
+
+33 0 obj
+<< /Type /StructElem /S /Strong /K [ 8 ] /P 32 0 R >>
+endobj
+
 34 0 obj
-<< /Type /StructElem /S /Code /K [ 22 ] /P 33 0 R >>
+<< /Type /StructElem /S /P /K [ 10 ] /P 23 0 R /Pg 4 0 R >>
 endobj
 
 35 0 obj
-<< /Type /StructElem /S /Code /K [ 24 ] /P 33 0 R >>
+<< /Type /StructElem /S /P /K [ 11 12 13 ] /P 23 0 R /Pg 4 0 R >>
+endobj
+
+36 0 obj
+<< /Type /StructElem /S /P /K [ 14 15 ] /P 23 0 R /Pg 4 0 R >>
+endobj
+
+37 0 obj
+<< /Type /StructElem /S /P /K [ 16 38 0 R 18 ] /P 23 0 R /Pg 4 0 R >>
+endobj
+
+38 0 obj
+<< /Type /StructElem /S /Link /K [ 39 0 R 17 ] /P 37 0 R >>
+endobj
+
+39 0 obj
+<< /Type /OBJR /Obj 5 0 R /Pg 4 0 R >>
+endobj
+
+40 0 obj
+<< /Type /StructElem /S /P /K [ 19 41 0 R 21 ] /P 23 0 R /Pg 4 0 R >>
+endobj
+
+41 0 obj
+<< /Type /StructElem /S /Link /K [ 42 0 R 20 ] /P 40 0 R >>
+endobj
+
+42 0 obj
+<< /Type /OBJR /Obj 7 0 R /Pg 4 0 R >>
+endobj
+
+43 0 obj
+<<
+  /Type /StructTreeRoot
+  /K [ 23 0 R ]
+  /ParentTree <<
+    /Nums [ 0 [ 25 0 R 27 0 R 28 0 R 27 0 R 30 0 R 31 0 R 30 0 R 32 0 R 33 0 R 32 0 R 34 0 R 35 0 R 35 0 R 35 0 R 36 0 R 36 0 R 37 0 R 38 0 R 37 0 R 40 0 R 41 0 R 40 0 R 21 0 R 22 0 R 21 0 R 20 0 R 21 0 R ] 1 38 0 R 2 41 0 R ]
+  >>
+>>
 endobj
 
 xref
-0 36
+0 44
 0000000000 65535 f 
 0000000015 00000 n 
 0000000221 00000 n 
-0000000344 00000 n 
-0000000430 00000 n 
-0000000620 00000 n 
-0000000813 00000 n 
-0000000887 00000 n 
-0000001064 00000 n 
-0000001138 00000 n 
-0000004307 00000 n 
-0000004416 00000 n 
-0000004526 00000 n 
-0000004634 00000 n 
-0000004739 00000 n 
-0000005044 00000 n 
-0000005193 00000 n 
-0000005257 00000 n 
-0000005342 00000 n 
-0000005479 00000 n 
-0000005543 00000 n 
-0000005628 00000 n 
-0000005695 00000 n 
-0000005780 00000 n 
-0000005851 00000 n 
-0000005927 00000 n 
-0000006010 00000 n 
-0000006090 00000 n 
-0000006177 00000 n 
-0000006254 00000 n 
-0000006310 00000 n 
-0000006397 00000 n 
-0000006474 00000 n 
-0000006530 00000 n 
-0000006637 00000 n 
-0000006707 00000 n 
+0000000379 00000 n 
+0000000527 00000 n 
+0000000718 00000 n 
+0000000907 00000 n 
+0000000981 00000 n 
+0000001158 00000 n 
+0000001232 00000 n 
+0000004581 00000 n 
+0000004668 00000 n 
+0000004776 00000 n 
+0000004885 00000 n 
+0000004995 00000 n 
+0000005100 00000 n 
+0000005159 00000 n 
+0000005291 00000 n 
+0000005405 00000 n 
+0000005513 00000 n 
+0000005633 00000 n 
+0000005703 00000 n 
+0000005810 00000 n 
+0000005880 00000 n 
+0000006049 00000 n 
+0000006113 00000 n 
+0000006236 00000 n 
+0000006300 00000 n 
+0000006385 00000 n 
+0000006522 00000 n 
+0000006586 00000 n 
+0000006671 00000 n 
+0000006738 00000 n 
+0000006823 00000 n 
+0000006894 00000 n 
+0000006971 00000 n 
+0000007054 00000 n 
+0000007134 00000 n 
+0000007221 00000 n 
+0000007298 00000 n 
+0000007354 00000 n 
+0000007441 00000 n 
+0000007518 00000 n 
+0000007574 00000 n 
 trailer
 <<
-  /ID [ <b5d995593fd28a07b5b798650b64a6d2> <b5d995593fd28a07b5b798650b64a6d2> ]
+  /ID [ <99edc64c6163ea2faa7d5ed7fa9dccb2> <99edc64c6163ea2faa7d5ed7fa9dccb2> ]
   /Info 1 0 R
   /Root 2 0 R
-  /Size 36
+  /Size 44
 >>
 startxref
-6777
+7886
 %%EOF
