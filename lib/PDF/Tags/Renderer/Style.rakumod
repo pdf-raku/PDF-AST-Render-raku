@@ -1,5 +1,5 @@
 #| Basic core-font styler
-unit class PDF::Tags::Writer::Style;
+unit class PDF::Tags::Renderer::Style;
 
 use PDF::Content::Font::CoreFont;
 use PDF::Content::FontObj;

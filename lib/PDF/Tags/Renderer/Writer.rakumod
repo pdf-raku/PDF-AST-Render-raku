@@ -1,10 +1,10 @@
-unit class PDF::Tags::Writer::AST;
+unit class PDF::Tags::Renderer::Writer;
 
-use PDF::Tags::Writer::Outlines :Level;
-also does PDF::Tags::Writer::Outlines;
+use PDF::Tags::Renderer::Outlines :Level;
+also does PDF::Tags::Renderer::Outlines;
 
 use PDF::API6;
-use PDF::Tags::Writer::Style;
+use PDF::Tags::Renderer::Style;
 
 use PDF::Content::Color :&color;
 use PDF::Content::FontObj;
@@ -54,8 +54,8 @@ my class PageFootNote {
 has PageFootNote:D @!footnotes;
 
 ### Rendering State ###
-has PDF::Tags::Writer::Style $.styler handles<style font-size leading line-height bold italic mono underline lines-before link verbatim>;
-has PDF::Tags::Writer::Style $!footer-style;
+has PDF::Tags::Renderer::Style $.styler handles<style font-size leading line-height bold italic mono underline lines-before link verbatim>;
+has PDF::Tags::Renderer::Style $!footer-style;
 has $!tx = $!margin-left; # text-flow x
 has $!ty; # text-flow y
 has Numeric $!indent = 0.0;

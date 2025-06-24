@@ -1,2 +1,2 @@
-PDF-Tags-Writer
-===============
+PDF-Tags-Renderer
+=================

@@ -15,16 +15,16 @@
   ],
   "description": "Simple PDF Tags based renderer",
   "license": "Artistic-2.0",
-    "name": "PDF::Tags::Writer",
+    "name": "PDF::Tags::Renderer",
   "provides": {
-    "PDF::Tags::Writer": "lib/PDF/Tags/Writer.rakumod",
-    "PDF::Tags::Writer::Outlines": "lib/PDF/Tags/Writer/Outlines.rakumod",
-    "PDF::Tags::Writer::Style": "lib/PDF/Tags/Writer/Style.rakumod",
-    "PDF::Tags::Writer::AST": "lib/PDF/Tags/Writer/AST.rakumod"
+    "PDF::Tags::Renderer": "lib/PDF/Tags/Renderer.rakumod",
+    "PDF::Tags::Renderer::Outlines": "lib/PDF/Tags/Renderer/Outlines.rakumod",
+    "PDF::Tags::Renderer::Style": "lib/PDF/Tags/Renderer/Style.rakumod",
+    "PDF::Tags::Renderer::Writer": "lib/PDF/Tags/Renderer/Writer.rakumod"
   },
   "resources": [
   ],
-  "source-url": "git://github.com/pdf-raku/PDF-Tags-Writer-raku.git",
+  "source-url": "git://github.com/pdf-raku/PDF-Tags-Renderer-raku.git",
   "tags": [
     "pdf",
     "pod"

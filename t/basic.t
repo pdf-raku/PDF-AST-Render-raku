@@ -1,5 +1,5 @@
 use Test;
-use PDF::Tags::Writer;
+use PDF::Tags::Renderer;
 use PDF::API6;
 
 plan 1;
@@ -20,7 +20,7 @@ my Pair:D $doc-ast =
              :P["A tap on an ", :Code[:Span[ :role<Index>, "on demand"]], " supply will initiate the production of values, and tapping the supply again may result in a new set of values. For example, ", :Code[:Span[ :role<Index>, "Supply.interval"]], " produces a fresh timer with the appropriate interval each time it is tapped. If the tap is closed, the timer simply stops emitting values to that tap."],
          ];
 
-my PDF::API6 $pdf = PDF::Tags::Writer.render($doc-ast);
+my PDF::API6 $pdf = PDF::Tags::Renderer.render($doc-ast);
 
 lives-ok { $pdf.save-as: "t/basic.pdf" };
 
