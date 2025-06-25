@@ -31,6 +31,7 @@ has Numeric $.margin-top;
 has Numeric $.margin-bottom;
 has Bool $.contents;
 has PDF::Content::FontObj %.font-map;
+has %.role-map;
 has PDF::Content::PageTree:D $.pages is required;
 has Bool $.finish;
 
@@ -491,6 +492,27 @@ multi method ast2pdf('LI', @content,) {
 
         $.ast2pdf: @content;
     }
+}
+
+multi method ast2pdf(Str:D $role where {%!role-map{$_}:exists}, @content is copy, *%atts) {
+    my Str $tag;
+
+    given %!role-map{$role} {
+        when Str {
+            $tag = $_
+        }
+        when Pair {
+            $tag = .key;
+            my :(@_, %_) := .value.&get-content;
+            @content.prepend: @_ if @_;
+            %atts{.key} //= .value for %_;
+        }
+        default {
+            die "Unhandled role mapping: {($role => $_).raku}";
+        }
+    }
+
+    $.ast2pdf: $tag, @content, :$role, |%atts;
 }
 
 multi method ast2pdf(Str:D $tag, @content, *%atts) {

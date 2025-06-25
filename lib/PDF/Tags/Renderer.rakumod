@@ -22,12 +22,14 @@ has CSS::TagSet::TaggedPDF $.styler .= new;
 has PDF::Tags $.tags .= create: :$!pdf, :$!styler;
 has PDF::Tags::Elem $.root = $!tags.Document;
 has PDF::Content::FontObj %.font-map;
+has Pair:D %.role-map;
 has Numeric $.width  = 612;
 has Numeric $.height = 792;
 has Bool $.contents = True;
 has %.index;
 has Bool $.tag = True;
 has Bool $.page-numbers;
+
 
 sub apply-styling(CSS::Properties:D $css, %props) {
     %props{.key} = .value for $css.Hash;
@@ -77,7 +79,7 @@ submethod TWEAK(Str:D :$lang = 'en', :$pod, :@fonts, :$stylesheet, :$page-style,
 method writer(PDF::Content::PageTree:D :$pages = $!pdf.Pages, PDF::Tags::Elem:D :$frag = $!root.Document) {
     $pages.media-box = 0, 0, $!width, $!height;
     my $finish = ! $!page-numbers;
-    my PDF::Tags::Renderer::Writer $writer .= new: :%!font-map, :$pages, :$finish, :$!tag, :$!pdf, :$!contents; #, |c;
+    my PDF::Tags::Renderer::Writer $writer .= new: :%!font-map, :%!role-map, :$pages, :$finish, :$!tag, :$!pdf, :$!contents; #, |c;
 }
 
 method !paginate(

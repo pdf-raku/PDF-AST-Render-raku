@@ -4,11 +4,12 @@ use PDF::API6;
 
 plan 1;
 
+my %role-map = U => :Span[:TextDecorationType("Underline")];
 my Pair:D $doc-ast =
     :Document[
              :Lang<en>,
              :H1["A basic Test Document"],
-             :P["This text is of ", :Span[:TextDecorationType("Underline"), "minor significance"], "."],
+             :P["This text is ", :U["underlined"], "."],
              :P["This text is of ", :Em["major significance"], "."],
              :P["This text is of ", :Strong["fundamental significance"], "."],
              :P["This text is verbatim C<with> B<disarmed> Z<formatting>."],
@@ -22,7 +23,7 @@ my Pair:D $doc-ast =
                 "tap is closed, the timer simply stops emitting values to that tap."],
          ];
 
-my PDF::API6 $pdf = PDF::Tags::Renderer.render($doc-ast);
+my PDF::API6 $pdf = PDF::Tags::Renderer.render($doc-ast, :%role-map);
 
 lives-ok { $pdf.save-as: "t/basic.pdf" };
 
