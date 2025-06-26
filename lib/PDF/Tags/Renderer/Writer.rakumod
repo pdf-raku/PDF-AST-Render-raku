@@ -32,6 +32,7 @@ has Numeric $.margin-bottom;
 has Bool $.contents;
 has PDF::Content::FontObj %.font-map;
 has %.role-map;
+has UInt $!role-map-depth = 0;
 has PDF::Content::PageTree:D $.pages is required;
 has Bool $.finish;
 
@@ -494,7 +495,7 @@ multi method ast2pdf('LI', @content,) {
     }
 }
 
-multi method ast2pdf(Str:D $role where {%!role-map{$_}:exists}, @content is copy, *%atts) {
+multi method ast2pdf(Str:D $role where {%!role-map{$_}:exists}, @content is copy, *%atts) is hidden-from-backtrace {
     my Str $tag;
 
     given %!role-map{$role} {
@@ -508,9 +509,13 @@ multi method ast2pdf(Str:D $role where {%!role-map{$_}:exists}, @content is copy
             %atts{.key} //= .value for %_;
         }
         default {
-            die "Unhandled role mapping: {($role => $_).raku}";
+            die "Unhandled role map target: {($role => $_).raku}";
         }
     }
+
+    temp $!role-map-depth;
+    die "role map depth exceeded while traversing $role => $tag"
+        if ++$!role-map-depth > 100;
 
     $.ast2pdf: $tag, @content, :$role, |%atts;
 }
