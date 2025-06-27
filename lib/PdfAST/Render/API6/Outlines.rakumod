@@ -1,4 +1,4 @@
-unit role PDF::Tags::Renderer::Outlines;
+unit role PdfAST::Render::API6::Outlines;
 
 my subset Level is export(:Level) of Int:D  where 0..6;
 

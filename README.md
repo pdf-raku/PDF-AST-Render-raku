@@ -1,12 +1,19 @@
-PDF-Tags-Renderer
+PDFAst-Render-API6
 =================
+
+Description
+-----------
+
+PDF::API6 based renderer for the fledgling PDFAst intermediate representation.
 
 Synopsis
 --------
 
 ```raku
+use PdfAST::Render::API6;
+
 my :role-map = 'U' => :Span[:TextDecorationType<Underline>];
-my Pair:D $doc-ast =
+my Pair:D $pdf-ast =
     :Document[ :Lang<en>,
         :H1["A basic Test Document"],
         :P["This text is ", :Em["italic"], "."],
@@ -21,16 +28,7 @@ my Pair:D $doc-ast =
            "timer with the appropriate interval each time it is tapped."],
      ];
 
-my PDF::API6 $pdf = PDF::Tags::Renderer.render($doc-ast, :%role-map);
+my  PDFAst::Render::API6 $renderer .= new: :%role-map;
+my PDF::API6 $pdf = $renderer.render($pdf-ast);
 $pdf.save-as: "example.pdf";
 ```
-
-Description
------------
-This module facilitates PDF construction from a simple data-structure that
-is simple enough to be used directly, or can act as an intermediate structure
-tree representation for conversion of basic documentation formats, such as Pod
-or Markdown, to PDF. 
-
-There is an emphasis on accessibility; the structure tree is directly translated
-to marked content in the generated PDF.

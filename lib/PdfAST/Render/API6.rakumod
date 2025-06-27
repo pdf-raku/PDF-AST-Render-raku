@@ -1,15 +1,15 @@
-unit class PDF::Tags::Renderer;
+unit class PdfAST::Render::API6;
 
-use PDF::Tags::Renderer::Outlines :Level;
-also does PDF::Tags::Renderer::Outlines;
+use PdfAST::Render::API6::Outlines :Level;
+also does PdfAST::Render::API6::Outlines;
 
 use PDF::API6;
 use PDF::Tags;
 use PDF::Tags::Elem;
 use PDF::Tags::Node;
 use PDF::Content;
-use PDF::Tags::Renderer::Style;
-use PDF::Tags::Renderer::Writer;
+use PdfAST::Render::API6::Style;
+use PdfAST::Render::API6::Writer;
 use CSS::TagSet::TaggedPDF;
 use CSS::Stylesheet;
 # PDF::Class
@@ -45,7 +45,7 @@ method !preload-fonts(@fonts) {
     my $loader = (require ::('PDF::Font::Loader'));
     for @fonts -> % ( Str :$file!, Bool :$bold, Bool :$italic, Bool :$mono ) {
         # font preload
-        my PDF::Tags::Renderer::Style $style .= new: :$bold, :$italic, :$mono;
+        my PdfAST::Render::API6::Style $style .= new: :$bold, :$italic, :$mono;
         if $file.IO.e {
             %!font-map{$style.font-key} = $loader.load-font: :$file;
         }
@@ -80,7 +80,7 @@ submethod TWEAK(Str:D :$lang = 'en', :$pod, :@fonts, :$stylesheet, :$page-style,
 method writer(PDF::Content::PageTree:D :$pages = $!pdf.Pages, PDF::Tags::Elem:D :$frag = $!root.Document) {
     $pages.media-box = 0, 0, $!width, $!height;
     my $finish = ! $!page-numbers;
-    my PDF::Tags::Renderer::Writer $writer .= new: :%!font-map, :%!role-map, :$pages, :$finish, :$!tag, :$!pdf, :$!contents; #, |c;
+    my PdfAST::Render::API6::Writer $writer .= new: :%!font-map, :%!role-map, :$pages, :$finish, :$!tag, :$!pdf, :$!contents; #, |c;
 }
 
 method !paginate(
@@ -156,7 +156,7 @@ multi method render(::?CLASS:U: Pair:D $doc-ast, |c) {
 }
 
 multi method render(::?CLASS:D: Pair:D $doc-ast, Bool :$index = True) {
-    my PDF::Tags::Renderer::Writer $writer = self.writer;
+    my PdfAST::Render::API6::Writer $writer = self.writer;
     my Pair:D @content = $writer.process-root(|$doc-ast);
     $writer.write-batch(@content, $!root);
     my %index = $writer.index;
