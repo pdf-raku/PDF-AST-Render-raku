@@ -333,7 +333,6 @@ multi method ast2pdf('Table', @content, *%atts) {
     }
 }
 
-
 method !make-link(Str:D $url) {
     my %style = :!block;
     given $url {
@@ -371,12 +370,13 @@ sub param2text($p) {
 
 multi method ast2pdf('Code', @content, *%atts where .<Placement> ~~ 'Block') {
     self!style: :indent, :tag(CODE), :lines-before(3), :%atts, {
-       self!pad-here;
-       $!code-start-y //= $!ty;
-       self.ast2pdf: @content;
-       self!finish-code;
-       self.say;
-   }
+        self!pad-here;
+        self.say;
+        $!code-start-y //= $!ty;
+        self.ast2pdf: @content;
+        self!finish-code;
+        self.say;
+    }
 }
 
 multi method ast2pdf('Span', @content, :role($)! where 'Index', :$Terms) {
@@ -450,27 +450,27 @@ multi method ast2pdf('FENote', @contents, *%atts) {
     }
 }
 
-multi method ast2pdf('Link', @content, Str:D :$href!) {
+multi method ast2pdf('Link', @content, Str:D :$href!, *%atts) {
     my %style = self!make-link: $href;
-    self!style: |%style, {
+    self!style: |%style, :%atts, {
         self.ast2pdf: @content;
     }
 }
 
-multi method ast2pdf('L', @content,) {
+multi method ast2pdf('L', @content, *%atts) {
     temp $!level += 1;
-    self!style: :tag(LIST), {
+    self!style: :tag(LIST), :%atts, {
         self.ast2pdf: @content;
     }
 }
 
-multi method ast2pdf('LI', @content,) {
+multi method ast2pdf('LI', @content, *%atts) {
     my Level $level = min($!level, 5);
     temp $!indent = $level + $.style.measure(:margin-left) / 10 - 1;
     temp $!padding = $.line-height * 2;
     my $do-float = True;
 
-    self!style: :tag(ListItem), :bold, :block, {
+    self!style: :tag(ListItem), :bold, :block, :%atts, {
         if self!deref(@content, 'Lbl') -> (@lbl, %atts) {
             $do-float = False if %atts<Placement> ~~ 'Block' || @lbl.&text-content.chars > 3;
             self!style: :tag<Lbl>, :%atts, {
