@@ -1,16 +1,16 @@
-PDFAst-Render-API6
+PDF-AST-Render
 =================
 
 Description
 -----------
 
-PDF::API6 based renderer for the fledgling PDFAst intermediate representation.
+PDF::API6 based renderer for the fledgling PDF::AST intermediate representation.
 
 Synopsis
 --------
 
 ```raku
-use PdfAST::Render::API6;
+use PDF::AST::Render;
 
 my :role-map = 'U' => :Span[:TextDecorationType<Underline>];
 my Pair:D $pdf-ast =
@@ -28,7 +28,7 @@ my Pair:D $pdf-ast =
            "timer with the appropriate interval each time it is tapped."],
      ];
 
-my  PDFAst::Render::API6 $renderer .= new: :%role-map;
+my  PDF::AST::Render $renderer .= new: :%role-map;
 my PDF::API6 $pdf = $renderer.render($pdf-ast);
 $pdf.save-as: "example.pdf";
 ```

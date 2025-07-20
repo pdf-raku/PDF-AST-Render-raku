@@ -2,8 +2,8 @@
 %¥±ë¼
 1 0 obj
 <<
-  /CreationDate (D:20250629091005+12'00')
-  /Creator (PDF::Class-0.5.22; PDF::Content-0.9.6; PDF-0.6.11; Raku-6.d; PDF::Tags-0.2.1; PdfAST::Render::API6-v0)
+  /CreationDate (D:20250721075018+12'00')
+  /Creator (PDF::Class-0.5.22; PDF::Content-0.9.6; PDF-0.6.11; Raku-6.d; PDF::Tags-0.2.1; PDF::AST::Render-v0)
   /Producer (PDF::API6-0.2.8)
 >>
 endobj
@@ -16,7 +16,7 @@ endobj
   /MarkInfo << /Marked true >>
   /Outlines 15 0 R
   /Pages 10 0 R
-  /StructTreeRoot 41 0 R
+  /StructTreeRoot 40 0 R
 >>
 endobj
 
@@ -74,19 +74,13 @@ endobj
 endobj
 
 9 0 obj
-<< /Length 2964 >> stream
+<< /Length 2902 >> stream
 /H1 << /MCID 0 >> BDC
   BT
     1 0 0 1 20 756 Tm
     /F1 24 Tf
     [ (A basic T) 92 (est Document) ] TJ
   ET
-  q
-    1.2 w
-    20 753.6 m
-    254.432 753.6 l
-    S
-  Q
 EMC
 /P << /MCID 1 >> BDC
   BT
@@ -210,46 +204,46 @@ EMC
 /Code << /MCID 18 >> BDC
   BT
     1 0 0 1 20 565.2 Tm
-    /F4 10.2 Tf
-    [ -5751 (on demand) ] TJ
+    /F4 12 Tf
+    [ -4888 (on demand) ] TJ
   ET
 EMC
 /P << /MCID 19 >> BDC
   BT
     1 0 0 1 20 565.2 Tm
     /F2 12 Tf
-    [ -9478 ( supply will initiate the production of v) 25 (alues,) ] TJ
+    [ -10288 ( supply will initiate the production of v) 25 (alues,) ] TJ
   ET
 EMC
 /P << /MCID 20 >> BDC
   BT
     1 0 0 1 20 565.2 Tm
-    [ -27397 (and tapping the supply ag) 5 (ain may result in a ne) 25 (w) ] TJ
+    [ -28207 (and tapping the supply ag) 5 (ain may result in a) ] TJ
     13.2 TL
     T*
-    [ (set of v) 25 (alues. F) 15 (or e) 15 (xample, ) ] TJ
+    [ (ne) 25 (w set of v) 25 (alues. F) 15 (or e) 15 (xample, ) ] TJ
   ET
 EMC
 /Code << /MCID 21 >> BDC
   BT
     1 0 0 1 20 552 Tm
-    /F4 10.2 Tf
-    [ -12907 (Supply.interval) ] TJ
+    /F4 12 Tf
+    [ -12862 (Supply.interval) ] TJ
   ET
 EMC
 /P << /MCID 22 >> BDC
   BT
     1 0 0 1 20 552 Tm
     /F2 12 Tf
-    [ -18621 ( produces a fresh timer with the appropriate interv) 25 (al each time it is) ] TJ
+    [ -21862 ( produces a fresh timer with the appropriate interv) 25 (al each time it) ] TJ
     T*
-    (tapped. If the ) Tj
+    (is tapped. If the ) Tj
   ET
 EMC
 /P << /MCID 23 >> BDC
   BT
     1 0 0 1 20 538.8 Tm
-    [ -5554 (tap is closed, the timer simply stops emitting v) 25 (alues to that tap.) ] TJ
+    [ -6471 (tap is closed, the timer simply stops emitting v) 25 (alues to that tap.) ] TJ
   ET
 EMC
 endstream
@@ -362,9 +356,9 @@ endobj
 <<
   /Type /StructElem
   /S /Document
-  /K [ 24 0 R 25 0 R 27 0 R 30 0 R 32 0 R 34 0 R 35 0 R 38 0 R 21 0 R ]
+  /K [ 24 0 R 25 0 R 26 0 R 29 0 R 31 0 R 33 0 R 34 0 R 37 0 R 21 0 R ]
   /Lang (en)
-  /P 41 0 R
+  /P 40 0 R
 >>
 endobj
 
@@ -376,7 +370,7 @@ endobj
 <<
   /Type /StructElem
   /S /H1
-  /K [ 26 0 R 0 ]
+  /K [ 0 ]
   /P 23 0 R
   /Pg 4 0 R
   /T (A basic Test Document)
@@ -384,133 +378,128 @@ endobj
 endobj
 
 26 0 obj
-<< /Type /StructElem /S /Artifact /P 25 0 R >>
+<< /Type /StructElem /S /P /K [ 1 27 0 R 3 ] /P 23 0 R /Pg 4 0 R >>
 endobj
 
 27 0 obj
-<< /Type /StructElem /S /P /K [ 1 28 0 R 3 ] /P 23 0 R /Pg 4 0 R >>
-endobj
-
-28 0 obj
 <<
   /Type /StructElem
   /S /U
   /A << /TextDecorationType /Underline /O /Layout >>
-  /K [ 29 0 R 2 ]
-  /P 27 0 R
+  /K [ 28 0 R 2 ]
+  /P 26 0 R
 >>
 endobj
 
+28 0 obj
+<< /Type /StructElem /S /Artifact /P 27 0 R >>
+endobj
+
 29 0 obj
-<< /Type /StructElem /S /Artifact /P 28 0 R >>
+<< /Type /StructElem /S /P /K [ 4 30 0 R 6 ] /P 23 0 R /Pg 4 0 R >>
 endobj
 
 30 0 obj
-<< /Type /StructElem /S /P /K [ 4 31 0 R 6 ] /P 23 0 R /Pg 4 0 R >>
+<< /Type /StructElem /S /Em /K [ 5 ] /P 29 0 R >>
 endobj
 
 31 0 obj
-<< /Type /StructElem /S /Em /K [ 5 ] /P 30 0 R >>
+<< /Type /StructElem /S /P /K [ 7 32 0 R 9 ] /P 23 0 R /Pg 4 0 R >>
 endobj
 
 32 0 obj
-<< /Type /StructElem /S /P /K [ 7 33 0 R 9 ] /P 23 0 R /Pg 4 0 R >>
+<< /Type /StructElem /S /Strong /K [ 8 ] /P 31 0 R >>
 endobj
 
 33 0 obj
-<< /Type /StructElem /S /Strong /K [ 8 ] /P 32 0 R >>
-endobj
-
-34 0 obj
 << /Type /StructElem /S /P /K [ 10 ] /P 23 0 R /Pg 4 0 R >>
 endobj
 
+34 0 obj
+<< /Type /StructElem /S /P /K [ 11 35 0 R 13 ] /P 23 0 R /Pg 4 0 R >>
+endobj
+
 35 0 obj
-<< /Type /StructElem /S /P /K [ 11 36 0 R 13 ] /P 23 0 R /Pg 4 0 R >>
+<< /Type /StructElem /S /Link /K [ 36 0 R 12 ] /P 34 0 R >>
 endobj
 
 36 0 obj
-<< /Type /StructElem /S /Link /K [ 37 0 R 12 ] /P 35 0 R >>
-endobj
-
-37 0 obj
 << /Type /OBJR /Obj 5 0 R /Pg 4 0 R >>
 endobj
 
+37 0 obj
+<< /Type /StructElem /S /P /K [ 14 38 0 R 16 ] /P 23 0 R /Pg 4 0 R >>
+endobj
+
 38 0 obj
-<< /Type /StructElem /S /P /K [ 14 39 0 R 16 ] /P 23 0 R /Pg 4 0 R >>
+<< /Type /StructElem /S /Link /K [ 39 0 R 15 ] /P 37 0 R >>
 endobj
 
 39 0 obj
-<< /Type /StructElem /S /Link /K [ 40 0 R 15 ] /P 38 0 R >>
-endobj
-
-40 0 obj
 << /Type /OBJR /Obj 7 0 R /Pg 4 0 R >>
 endobj
 
-41 0 obj
+40 0 obj
 <<
   /Type /StructTreeRoot
   /K [ 23 0 R ]
   /ParentTree <<
-    /Nums [ 0 [ 25 0 R 27 0 R 28 0 R 27 0 R 30 0 R 31 0 R 30 0 R 32 0 R 33 0 R 32 0 R 34 0 R 35 0 R 36 0 R 35 0 R 38 0 R 39 0 R 38 0 R 21 0 R 22 0 R 21 0 R 21 0 R 20 0 R 21 0 R 21 0 R ] 1 36 0 R 2 39 0 R ]
+    /Nums [ 0 [ 25 0 R 26 0 R 27 0 R 26 0 R 29 0 R 30 0 R 29 0 R 31 0 R 32 0 R 31 0 R 33 0 R 34 0 R 35 0 R 34 0 R 37 0 R 38 0 R 37 0 R 21 0 R 22 0 R 21 0 R 21 0 R 20 0 R 21 0 R 21 0 R ] 1 35 0 R 2 38 0 R ]
   >>
   /RoleMap << /U /Span >>
 >>
 endobj
 
 xref
-0 42
+0 41
 0000000000 65535 f 
 0000000015 00000 n 
-0000000224 00000 n 
-0000000382 00000 n 
-0000000526 00000 n 
-0000000717 00000 n 
-0000000910 00000 n 
-0000000984 00000 n 
-0000001161 00000 n 
-0000001235 00000 n 
-0000004252 00000 n 
-0000004339 00000 n 
-0000004447 00000 n 
-0000004556 00000 n 
-0000004666 00000 n 
-0000004771 00000 n 
-0000004830 00000 n 
-0000004962 00000 n 
-0000005076 00000 n 
-0000005184 00000 n 
-0000005304 00000 n 
-0000005374 00000 n 
-0000005487 00000 n 
-0000005557 00000 n 
-0000005712 00000 n 
-0000005776 00000 n 
-0000005899 00000 n 
-0000005963 00000 n 
-0000006048 00000 n 
-0000006182 00000 n 
-0000006246 00000 n 
-0000006331 00000 n 
-0000006398 00000 n 
-0000006483 00000 n 
-0000006554 00000 n 
-0000006631 00000 n 
-0000006718 00000 n 
-0000006795 00000 n 
-0000006851 00000 n 
-0000006938 00000 n 
-0000007015 00000 n 
-0000007071 00000 n 
+0000000220 00000 n 
+0000000378 00000 n 
+0000000522 00000 n 
+0000000713 00000 n 
+0000000906 00000 n 
+0000000980 00000 n 
+0000001157 00000 n 
+0000001231 00000 n 
+0000004186 00000 n 
+0000004273 00000 n 
+0000004381 00000 n 
+0000004490 00000 n 
+0000004600 00000 n 
+0000004705 00000 n 
+0000004764 00000 n 
+0000004896 00000 n 
+0000005010 00000 n 
+0000005118 00000 n 
+0000005238 00000 n 
+0000005308 00000 n 
+0000005421 00000 n 
+0000005491 00000 n 
+0000005646 00000 n 
+0000005710 00000 n 
+0000005826 00000 n 
+0000005911 00000 n 
+0000006045 00000 n 
+0000006109 00000 n 
+0000006194 00000 n 
+0000006261 00000 n 
+0000006346 00000 n 
+0000006417 00000 n 
+0000006494 00000 n 
+0000006581 00000 n 
+0000006658 00000 n 
+0000006714 00000 n 
+0000006801 00000 n 
+0000006878 00000 n 
+0000006934 00000 n 
 trailer
 <<
   /ID [ (basic.t         ) (basic.t         ) ]
   /Info 1 0 R
   /Root 2 0 R
-  /Size 42
+  /Size 41
 >>
 startxref
-7388
+7251
 %%EOF

@@ -1,5 +1,5 @@
 #| Basic core-font styler
-unit class PdfAST::Render::API6::Style;
+unit class PDF::AST::Render::Style;
 
 use PDF::Content::Font::CoreFont;
 use PDF::Content::FontObj;

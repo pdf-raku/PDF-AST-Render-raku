@@ -15,16 +15,16 @@
   ],
   "description": "Simple PDF Tags based renderer",
   "license": "Artistic-2.0",
-    "name": "PdfAST::Render::API6",
+    "name": "PDF::AST::Render",
   "provides": {
-    "PdfAST::Render::API6": "lib/PdfAST/Render/API6.rakumod",
-    "PdfAST::Render::API6::Outlines": "lib/PdfAST/Render/API6/Outlines.rakumod",
-    "PdfAST::Render::API6::Style": "lib/PdfAST/Render/API6/Style.rakumod",
-    "PdfAST::Render::API6::Writer": "lib/PdfAST/Render/API6/Writer.rakumod"
+    "PDF::AST::Render": "lib/PDF/AST/Render.rakumod",
+    "PDF::AST::Render::Outlines": "lib/PDF/AST/Render/Outlines.rakumod",
+    "PDF::AST::Render::Style": "lib/PDF/AST/Render/Style.rakumod",
+    "PDF::AST::Render::Writer": "lib/PDF/AST/Render/Writer.rakumod"
   },
   "resources": [
   ],
-  "source-url": "git://github.com/pdf-raku/PdfAST-Render-API6-raku.git",
+  "source-url": "git://github.com/pdf-raku/PDF-AST-Render-raku.git",
   "tags": [
     "pdf",
     "pod"

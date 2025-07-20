@@ -1,10 +1,10 @@
-unit class PdfAST::Render::API6::Writer;
+unit class PDF::AST::Render::Writer;
 
-use PdfAST::Render::API6::Outlines :Level;
-also does PdfAST::Render::API6::Outlines;
+use PDF::AST::Render::Outlines :Level;
+also does PDF::AST::Render::Outlines;
 
 use PDF::API6;
-use PdfAST::Render::API6::Style;
+use PDF::AST::Render::Style;
 
 use PDF::Content::Color :&color;
 use PDF::Content::FontObj;
@@ -56,8 +56,8 @@ my class PageFootNote {
 has PageFootNote:D @!footnotes;
 
 ### Rendering State ###
-has PdfAST::Render::API6::Style $.styler handles<style font-size leading line-height bold italic mono underline lines-before link verbatim>;
-has PdfAST::Render::API6::Style $!footer-style;
+has PDF::AST::Render::Style $.styler handles<style font-size leading line-height bold italic mono underline lines-before link verbatim>;
+has PDF::AST::Render::Style $!footer-style;
 has $!tx = $!margin-left; # text-flow x
 has $!ty; # text-flow y
 has Numeric $!indent = 0.0;
@@ -843,16 +843,13 @@ method !height-remaining {
     $!ty - $!margin-bottom - $!padding - $!gutter * $!footer-style.line-height;
 }
 
-method !lines-remaining {
-    (self!height-remaining / $!footer-style.line-height + 0.01).Int;
-}
-
 method !finish-page {
     self!finish-code
         if $!code-start-y;
     if @!footnotes {
         temp $!styler = $!footer-style;
         temp $!indent = 0;
+        temp $!padding = 0;
         temp $!code-start-y = Nil;
         $!tx = $!margin-left;
         $!ty = self!bottom;

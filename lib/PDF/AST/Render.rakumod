@@ -1,15 +1,15 @@
-unit class PdfAST::Render::API6;
+unit class PDF::AST::Render;
 
-use PdfAST::Render::API6::Outlines :Level;
-also does PdfAST::Render::API6::Outlines;
+use PDF::AST::Render::Outlines :Level;
+also does PDF::AST::Render::Outlines;
 
 use PDF::API6;
 use PDF::Tags;
 use PDF::Tags::Elem;
 use PDF::Tags::Node;
 use PDF::Content;
-use PdfAST::Render::API6::Style;
-use PdfAST::Render::API6::Writer;
+use PDF::AST::Render::Style;
+use PDF::AST::Render::Writer;
 use CSS::TagSet::TaggedPDF;
 use CSS::Stylesheet;
 # PDF::Class
@@ -30,7 +30,7 @@ has Bool $.contents = True;
 has %.index;
 has Bool $.tag = True;
 has Bool $.page-numbers;
-
+has Bool $!finished;
 
 sub apply-styling(CSS::Properties:D $css, %props) {
     %props{.key} = .value for $css.Hash;
@@ -45,7 +45,7 @@ method !preload-fonts(@fonts) {
     my $loader = (require ::('PDF::Font::Loader'));
     for @fonts -> % ( Str :$file!, Bool :$bold, Bool :$italic, Bool :$mono ) {
         # font preload
-        my PdfAST::Render::API6::Style $style .= new: :$bold, :$italic, :$mono;
+        my PDF::AST::Render::Style $style .= new: :$bold, :$italic, :$mono;
         if $file.IO.e {
             %!font-map{$style.font-key} = $loader.load-font: :$file;
         }
@@ -80,7 +80,7 @@ submethod TWEAK(Str:D :$lang = 'en', :$pod, :@fonts, :$stylesheet, :$page-style,
 method writer(PDF::Content::PageTree:D :$pages = $!pdf.Pages, PDF::Tags::Elem:D :$frag = $!root.Document) {
     $pages.media-box = 0, 0, $!width, $!height;
     my $finish = ! $!page-numbers;
-    my PdfAST::Render::API6::Writer $writer .= new: :%!font-map, :%!role-map, :$pages, :$finish, :$!tag, :$!pdf, :$!contents; #, |c;
+    my PDF::AST::Render::Writer $writer .= new: :%!font-map, :%!role-map, :$pages, :$finish, :$!tag, :$!pdf, :$!contents; #, |c;
 }
 
 method !paginate(
@@ -107,7 +107,7 @@ method !paginate(
     }
 }
 
-method merge-batch( % ( :@toc!, :%index!, :$frag, :%info, |c ) ) {
+method merge-batch( % ( :@toc!, :%index!, :$frag, :%info, :$pages ) ) {
     @.toc.append: @toc;
     %.index ,= %index;
     with $frag {
@@ -118,17 +118,19 @@ method merge-batch( % ( :@toc!, :%index!, :$frag, :%info, |c ) ) {
     if %info {
         my $pdf-info = ($!pdf.Info //= {});
         for %info.pairs {
-            $pdf-info{.key} = .value;
+            $pdf-info{.key} //= .value;
         }
     }
-    self!paginate(|c)
-        if $!page-numbers;
     .Lang = self.lang with $!root;
 }
 
 method pdf {
-    if @.toc {
-        $!pdf.outlines.kids = @.toc;
+    unless $!finished++ {
+        self!paginate()
+            if $!page-numbers ;
+        if @.toc {
+            $!pdf.outlines.kids = @.toc;
+        }
     }
     $!pdf;
 }
@@ -156,7 +158,7 @@ multi method render(::?CLASS:U: Pair:D $doc-ast, |c) {
 }
 
 multi method render(::?CLASS:D: Pair:D $doc-ast, Bool :$index = True) {
-    my PdfAST::Render::API6::Writer $writer = self.writer;
+    my PDF::AST::Render::Writer $writer = self.writer;
     my Pair:D @content = $writer.process-root(|$doc-ast);
     $writer.write-batch(@content, $!root);
     my %index = $writer.index;
