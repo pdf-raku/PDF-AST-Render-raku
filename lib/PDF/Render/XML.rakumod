@@ -1,15 +1,15 @@
-unit class PDF::AST::Render;
+unit class PDF::Render::XML;
 
-use PDF::AST::Render::Outlines :Level;
-also does PDF::AST::Render::Outlines;
+use PDF::Render::XML::Outlines :Level;
+also does PDF::Render::XML::Outlines;
 
 use PDF::API6;
 use PDF::Tags;
 use PDF::Tags::Elem;
 use PDF::Tags::Node;
 use PDF::Content;
-use PDF::AST::Render::Style;
-use PDF::AST::Render::Writer;
+use PDF::Render::XML::Style;
+use PDF::Render::XML::Writer;
 use CSS::TagSet::TaggedPDF;
 use CSS::Stylesheet;
 # PDF::Class
@@ -45,7 +45,7 @@ method !preload-fonts(@fonts) {
     my $loader = (require ::('PDF::Font::Loader'));
     for @fonts -> % ( Str :$file!, Bool :$bold, Bool :$italic, Bool :$mono ) {
         # font preload
-        my PDF::AST::Render::Style $style .= new: :$bold, :$italic, :$mono;
+        my PDF::Render::XML::Style $style .= new: :$bold, :$italic, :$mono;
         if $file.IO.e {
             %!font-map{$style.font-key} = $loader.load-font: :$file;
         }
@@ -80,7 +80,7 @@ submethod TWEAK(Str:D :$lang = 'en', :$pod, :@fonts, :$stylesheet, :$page-style,
 method writer(PDF::Content::PageTree:D :$pages = $!pdf.Pages, PDF::Tags::Elem:D :$frag = $!root.Document) {
     $pages.media-box = 0, 0, $!width, $!height;
     my $finish = ! $!page-numbers;
-    my PDF::AST::Render::Writer $writer .= new: :%!font-map, :%!role-map, :$pages, :$finish, :$!tag, :$!pdf, :$!contents; #, |c;
+    my PDF::Render::XML::Writer $writer .= new: :%!font-map, :%!role-map, :$pages, :$finish, :$!tag, :$!pdf, :$!contents; #, |c;
 }
 
 method !paginate(
@@ -153,13 +153,17 @@ sub categorize-alphabetically(%index) {
 
 method lang is rw { $!pdf.catalog.Lang; }
 
-multi method render(::?CLASS:U: Pair:D $doc-ast, |c) {
-    self.new(|c).render($doc-ast);
+multi method render(::?CLASS:U: Any:D $xml where .isa("LibXML::Item"), |c) {
+    self.new(|c).render($xml.ast);
 }
 
-multi method render(::?CLASS:D: Pair:D $doc-ast, Bool :$index = True) {
-    my PDF::AST::Render::Writer $writer = self.writer;
-    my Pair:D @content = $writer.process-root(|$doc-ast);
+multi method render(::?CLASS:U: Pair:D $xml-ast, |c) {
+    self.new(|c).render($xml-ast);
+}
+
+multi method render(::?CLASS:D: Pair:D $xml-ast, Bool :$index = True) {
+    my PDF::Render::XML::Writer $writer = self.writer;
+    my Pair:D @content = $writer.process-root(|$xml-ast);
     $writer.write-batch(@content, $!root);
     my %index = $writer.index;
     my @toc = $writer.toc;

@@ -1,4 +1,4 @@
-unit role PDF::AST::Render::Outlines;
+unit role PDF::Render::XML::Outlines;
 
 my subset Level is export(:Level) of Int:D  where 0..6;
 

@@ -1,12 +1,12 @@
-PDF-AST-Render
+PDF-XML-Render
 =================
 
 Description
 -----------
 
-PDF::API6 based renderer for the fledgling PDF::AST format.
+PDF::API6 based renderer for the fledgling PDF::XML format.
 
-PDF::AST is intended, either as:
+PDF::XML is intended, either as:
 - an intermediate representation for simple documentation languages such as
 Markdown, Man and Pod. Possibly RakuDoc?
 - a suitable high-level target for direct use for general ad-hoc documentation.
@@ -22,7 +22,7 @@ Synopsis
 --------
 
 ```raku
-use PDF::AST::Render;
+use PDF::Render::XML;
 
 my %role-map = (
     'U' => :Span[:TextDecorationType<Underline>],
@@ -44,7 +44,7 @@ my Pair:D $pdf-ast =
            "timer with the appropriate interval each time it is tapped."],
      ];
 
-my PDF::AST::Render $renderer .= new: :%role-map;
+my PDF::Render::XML $renderer .= new: :%role-map;
 my PDF::API6 $pdf = $renderer.render($pdf-ast);
 $pdf.save-as: "example.pdf";
 ```
