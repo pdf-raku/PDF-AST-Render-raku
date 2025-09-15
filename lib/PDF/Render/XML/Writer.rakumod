@@ -51,6 +51,7 @@ my class PageFootNote {
     has Int:D $.num is rw is required;
     has PDF::Tags::Elem:D $.tag is required;
     has DestRef $.back is required;
+    method pad { 2 }
     method ind { '[' ~ $!num ~ ']' }
 }
 has PageFootNote:D @!footnotes;
@@ -424,7 +425,7 @@ multi method ast2pdf('FENote', @contents, *%atts) {
     my UInt:D $footnote-lines = do {
         # pre-compute footnote size
         temp $!styler = $!footer-style;
-        temp $!tx = $!margin-left;
+        temp $!tx = $!margin-left + $footnote.pad;
         temp $!ty = $!page.height;
         temp $!indent = 0;
         given $footnote {
@@ -567,7 +568,6 @@ multi method ast2pdf(Pair:D $_) {
     $.ast2pdf(.key, .value);
 }
 
-
 multi method ast2pdf($_) {
    die .raku;
 }
@@ -689,10 +689,9 @@ method !style(&codez, Numeric :$indent, Str :tag($name), :%atts, Bool :$block is
 }
 
 method !ast2dest(@content, Str :$name) {
-    my $y0 := $!ty;
-
     $.ast2pdf(@content);
 
+    my $y0 := $!ty;
     my \y = $!ty;
     my \h = max(y - $y0, $!last-chunk-height);
     my DestRef $ = self!make-dest: :$name, :fit(FitBoxHoriz), :top(y+h);
@@ -870,7 +869,7 @@ method !finish-page {
                         $.print($footnote.ind);
                     } # [n]
                 }
-                $!tx += 2;
+                $!tx += $footnote.pad;
 
                 $.ast2pdf($footnote.contents);
             }
