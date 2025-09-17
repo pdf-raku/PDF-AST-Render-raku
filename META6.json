@@ -15,16 +15,16 @@
   ],
   "description": "Simple PDF Tags based renderer",
   "license": "Artistic-2.0",
-  "name": "PDF::Render::XML",
+  "name": "PDF::Render",
   "provides": {
-    "PDF::Render::XML": "lib/PDF/Render/XML.rakumod",
-    "PDF::Render::XML::Outlines": "lib/PDF/Render/XML/Outlines.rakumod",
-    "PDF::Render::XML::Style": "lib/PDF/Render/XML/Style.rakumod",
-    "PDF::Render::XML::Writer": "lib/PDF/Render/XML/Writer.rakumod"
+    "PDF::Render": "lib/PDF/Render.rakumod",
+    "PDF::Render::Outlines": "lib/PDF/Render/Outlines.rakumod",
+    "PDF::Render::Style": "lib/PDF/Render/Style.rakumod",
+    "PDF::Render::Tree": "lib/PDF/Render/Tree.rakumod"
   },
   "resources": [
   ],
-  "source-url": "git://github.com/pdf-raku/PDF-XML-Render-raku.git",
+  "source-url": "git://github.com/pdf-raku/PDF-Render-raku.git",
   "tags": [
     "pdf",
     "pod"
