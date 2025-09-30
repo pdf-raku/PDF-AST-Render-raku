@@ -4,7 +4,7 @@ PDF-Render
 Description
 -----------
 
-A PDF::API6 based renderer for an intermediate tagged PDF representation, typically produced
+A simple PDF::API6 based renderer for an intermediate tagged PDF representation, typically produced
 from Pod, Markdown, or as application output.
 
 Synopsis

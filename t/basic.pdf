@@ -1,11 +1,7 @@
 %PDF-1.4
 %¥±ë¼
 1 0 obj
-<<
-  /CreationDate (D:20250918062441+12'00')
-  /Creator (PDF::Class-0.5.27; PDF::Content-0.9.10; PDF-0.6.13; Raku-6.d; PDF::Tags-0.2.5; PDF::Render-v0)
-  /Producer (PDF::API6-0.2.9)
->>
+<< /Lang (en) >>
 endobj
 
 2 0 obj
@@ -22,9 +18,9 @@ endobj
 
 3 0 obj
 <<
-  /A_basic_Test_Document [ 4 0 R /FitBH 756 ]
-  /Supply.interval [ 4 0 R /FitBH 552 ]
-  /on_demand [ 4 0 R /FitBH 565.2 ]
+  /A_basic_Test_Document [ 4 0 R /FitBH 745.6 ]
+  /Supply.interval [ 4 0 R /FitBH 541.6 ]
+  /on_demand [ 4 0 R /FitBH 554.8 ]
 >>
 endobj
 
@@ -47,7 +43,7 @@ endobj
   /Border [ 0 0 0 ]
   /Contents (http://www.google.com/)
   /P 4 0 R
-  /Rect [ 148.488 615.76 269.044 630.96 ]
+  /Rect [ 148.488 605.36 269.044 620.56 ]
   /StructParent 1
 >>
 endobj
@@ -64,7 +60,7 @@ endobj
   /Border [ 0 0 0 ]
   /Contents (google)
   /P 4 0 R
-  /Rect [ 199.152 588.88 235.816 604.08 ]
+  /Rect [ 199.152 578.48 235.816 593.68 ]
   /StructParent 2
 >>
 endobj
@@ -74,94 +70,94 @@ endobj
 endobj
 
 9 0 obj
-<< /Length 2964 >> stream
+<< /Length 2970 >> stream
 /H1 << /MCID 0 >> BDC
   BT
-    1 0 0 1 20 756 Tm
+    1 0 0 1 20 745.6 Tm
     /F1 24 Tf
     [ (A basic T) 92 (est Document) ] TJ
   ET
   q
     1.2 w
-    20 753.6 m
-    254.432 753.6 l
+    20 743.2 m
+    254.432 743.2 l
     S
   Q
 EMC
 /P << /MCID 1 >> BDC
   BT
-    1 0 0 1 20 726.48 Tm
+    1 0 0 1 20 716.08 Tm
     /F2 12 Tf
     [ (This te) 15 (xt is ) ] TJ
   ET
 EMC
 /Span << /MCID 2 >> BDC
   BT
-    1 0 0 1 20 726.48 Tm
+    1 0 0 1 20 716.08 Tm
     [ -4680 (underlined) ] TJ
   ET
   q
     0.6 w
-    76.16 725.28 m
-    127.484 725.28 l
+    76.16 714.88 m
+    127.484 714.88 l
     S
   Q
 EMC
 /P << /MCID 3 >> BDC
   BT
-    1 0 0 1 20 726.48 Tm
+    1 0 0 1 20 716.08 Tm
     [ -8957 (.) ] TJ
   ET
 EMC
 /P << /MCID 4 >> BDC
   BT
-    1 0 0 1 20 699.6 Tm
+    1 0 0 1 20 689.2 Tm
     [ (This te) 15 (xt is of ) ] TJ
   ET
 EMC
 /Em << /MCID 5 >> BDC
   BT
-    1 0 0 1 20 699.6 Tm
+    1 0 0 1 20 689.2 Tm
     /F3 12 Tf
     [ -5763 (major signif) 20 (icance) ] TJ
   ET
 EMC
 /P << /MCID 6 >> BDC
   BT
-    1 0 0 1 20 699.6 Tm
+    1 0 0 1 20 689.2 Tm
     /F2 12 Tf
     [ -13215 (.) ] TJ
   ET
 EMC
 /P << /MCID 7 >> BDC
   BT
-    1 0 0 1 20 672.72 Tm
+    1 0 0 1 20 662.32 Tm
     [ (This te) 15 (xt is of ) ] TJ
   ET
 EMC
 /Strong << /MCID 8 >> BDC
   BT
-    1 0 0 1 20 672.72 Tm
+    1 0 0 1 20 662.32 Tm
     /F1 12 Tf
     [ -5763 (fundamental signif) 25 (icance) ] TJ
   ET
 EMC
 /P << /MCID 9 >> BDC
   BT
-    1 0 0 1 20 672.72 Tm
+    1 0 0 1 20 662.32 Tm
     /F2 12 Tf
     [ -16433 (.) ] TJ
   ET
 EMC
 /P << /MCID 10 >> BDC
   BT
-    1 0 0 1 20 645.84 Tm
+    1 0 0 1 20 635.44 Tm
     [ (This te) 15 (xt is v) 15 (erbatim C<with> B<disarmed> Z<formatting>.) ] TJ
   ET
 EMC
 /P << /MCID 11 >> BDC
   BT
-    1 0 0 1 20 618.96 Tm
+    1 0 0 1 20 608.56 Tm
     [ (This te) 15 (xt contains a link to ) ] TJ
   ET
 EMC
@@ -169,20 +165,20 @@ q
   0 0 1 rg
   /Link << /MCID 12 >> BDC
     BT
-      1 0 0 1 20 618.96 Tm
+      1 0 0 1 20 608.56 Tm
       [ -10874 (http://www) 65 (.google.com/) ] TJ
     ET
   EMC
 Q
 /P << /MCID 13 >> BDC
   BT
-    1 0 0 1 20 618.96 Tm
+    1 0 0 1 20 608.56 Tm
     [ -20587 (.) ] TJ
   ET
 EMC
 /P << /MCID 14 >> BDC
   BT
-    1 0 0 1 20 592.08 Tm
+    1 0 0 1 20 581.68 Tm
     [ (This te) 15 (xt contains a link with label to ) ] TJ
   ET
 EMC
@@ -190,40 +186,40 @@ q
   0 0 1 rg
   /Link << /MCID 15 >> BDC
     BT
-      1 0 0 1 20 592.08 Tm
+      1 0 0 1 20 581.68 Tm
       [ -15096 (google) ] TJ
     ET
   EMC
 Q
 /P << /MCID 16 >> BDC
   BT
-    1 0 0 1 20 592.08 Tm
+    1 0 0 1 20 581.68 Tm
     [ -17818 (.) ] TJ
   ET
 EMC
 /P << /MCID 17 >> BDC
   BT
-    1 0 0 1 20 565.2 Tm
+    1 0 0 1 20 554.8 Tm
     (A tap on an ) Tj
   ET
 EMC
 /Code << /MCID 18 >> BDC
   BT
-    1 0 0 1 20 565.2 Tm
+    1 0 0 1 20 554.8 Tm
     /F4 10.2 Tf
     [ -5751 (on demand) ] TJ
   ET
 EMC
 /P << /MCID 19 >> BDC
   BT
-    1 0 0 1 20 565.2 Tm
+    1 0 0 1 20 554.8 Tm
     /F2 12 Tf
     [ -9478 ( supply will initiate the production of v) 25 (alues,) ] TJ
   ET
 EMC
 /P << /MCID 20 >> BDC
   BT
-    1 0 0 1 20 565.2 Tm
+    1 0 0 1 20 554.8 Tm
     [ -27397 (and tapping the supply ag) 5 (ain may result in a ne) 25 (w) ] TJ
     13.2 TL
     T*
@@ -232,14 +228,14 @@ EMC
 EMC
 /Code << /MCID 21 >> BDC
   BT
-    1 0 0 1 20 552 Tm
+    1 0 0 1 20 541.6 Tm
     /F4 10.2 Tf
     [ -12907 (Supply.interval) ] TJ
   ET
 EMC
 /P << /MCID 22 >> BDC
   BT
-    1 0 0 1 20 552 Tm
+    1 0 0 1 20 541.6 Tm
     /F2 12 Tf
     [ -18621 ( produces a fresh timer with the appropriate interv) 25 (al each time it is) ] TJ
     T*
@@ -248,7 +244,7 @@ EMC
 EMC
 /P << /MCID 23 >> BDC
   BT
-    1 0 0 1 20 538.8 Tm
+    1 0 0 1 20 528.4 Tm
     [ -5554 (tap is closed, the timer simply stops emitting v) 25 (alues to that tap.) ] TJ
   ET
 EMC
@@ -363,7 +359,6 @@ endobj
   /Type /StructElem
   /S /Document
   /K [ 24 0 R 25 0 R 27 0 R 30 0 R 32 0 R 34 0 R 35 0 R 38 0 R 21 0 R ]
-  /Lang (en)
   /P 41 0 R
 >>
 endobj
@@ -464,46 +459,46 @@ xref
 0 42
 0000000000 65535 f 
 0000000015 00000 n 
-0000000216 00000 n 
-0000000374 00000 n 
-0000000518 00000 n 
-0000000709 00000 n 
-0000000902 00000 n 
-0000000976 00000 n 
-0000001153 00000 n 
-0000001227 00000 n 
-0000004244 00000 n 
-0000004331 00000 n 
-0000004439 00000 n 
-0000004548 00000 n 
-0000004658 00000 n 
-0000004763 00000 n 
-0000004822 00000 n 
-0000004954 00000 n 
-0000005068 00000 n 
-0000005176 00000 n 
-0000005296 00000 n 
-0000005366 00000 n 
-0000005479 00000 n 
-0000005549 00000 n 
-0000005704 00000 n 
-0000005768 00000 n 
-0000005891 00000 n 
-0000005955 00000 n 
-0000006040 00000 n 
-0000006174 00000 n 
-0000006238 00000 n 
-0000006323 00000 n 
-0000006390 00000 n 
-0000006475 00000 n 
-0000006546 00000 n 
-0000006623 00000 n 
-0000006710 00000 n 
-0000006787 00000 n 
-0000006843 00000 n 
-0000006930 00000 n 
-0000007007 00000 n 
-0000007063 00000 n 
+0000000048 00000 n 
+0000000206 00000 n 
+0000000354 00000 n 
+0000000545 00000 n 
+0000000738 00000 n 
+0000000812 00000 n 
+0000000989 00000 n 
+0000001063 00000 n 
+0000004086 00000 n 
+0000004173 00000 n 
+0000004281 00000 n 
+0000004390 00000 n 
+0000004500 00000 n 
+0000004605 00000 n 
+0000004664 00000 n 
+0000004796 00000 n 
+0000004910 00000 n 
+0000005018 00000 n 
+0000005138 00000 n 
+0000005208 00000 n 
+0000005321 00000 n 
+0000005391 00000 n 
+0000005533 00000 n 
+0000005597 00000 n 
+0000005720 00000 n 
+0000005784 00000 n 
+0000005869 00000 n 
+0000006003 00000 n 
+0000006067 00000 n 
+0000006152 00000 n 
+0000006219 00000 n 
+0000006304 00000 n 
+0000006375 00000 n 
+0000006452 00000 n 
+0000006539 00000 n 
+0000006616 00000 n 
+0000006672 00000 n 
+0000006759 00000 n 
+0000006836 00000 n 
+0000006892 00000 n 
 trailer
 <<
   /ID [ (basic.t         ) (basic.t         ) ]
@@ -512,5 +507,5 @@ trailer
   /Size 42
 >>
 startxref
-7380
+7209
 %%EOF

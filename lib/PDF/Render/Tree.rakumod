@@ -87,10 +87,10 @@ has $.linker = DefaultLinker;
 
 method process-root(:@Document!) {
     my :(@content, %info) := @Document.&get-content;
-    $!pdf.Root<Lang> = $_ with %info<Lang>:delete;
+    $!pdf.Root<Lang> = $_ with %info<lang>:delete;
     if %info {
         my $Info = $!pdf.Info //= {};
-        $Info{.key} = .value for %info.sort;
+        $Info{.key.tclc} = .value for %info.sort;
     }
     @content;
 }
@@ -200,7 +200,9 @@ method !table-row(@row, @widths, :@border!, Bool :$header) {
                     if $header {
                         # draw underline
                         my $y = $!ty + $tb.underline-position - $head-space;
-                        self!draw-line: $tab, $y, $tab + $width;
+                        self!tag: Artifact, {
+                            self!draw-line: $tab, $y, $tab + $width;
+                        }
                     }
                 }
                 given $tb.content-height {
@@ -214,7 +216,7 @@ method !table-row(@row, @widths, :@border!, Bool :$header) {
             $tab += $width + @border[0];
         }
         if @overflow {
-            # continue table
+            # continue table on next page
             self!style: :lines-before(3), {
                 self!table-row(@overflow, @widths, :$header);
             }
@@ -489,7 +491,6 @@ multi method ast2pdf('LI', @content, *%atts) {
         }
 
         $!float = $do-float;
-        $!tx = self!indent;
         temp $!indent += 1;
 
         $.ast2pdf: @content;
@@ -892,7 +893,7 @@ method !new-page {
     $!page = $!pdf.add-page;
     $!gfx = $!page.gfx;
     $!tx = $!margin-left;
-    $!ty = $!page.height - $!margin-top - 16;
+    $!ty = $!page.height - $!margin-top - $.line-height;
     # suppress whitespace before significant content
     $!padding = 0;
 }

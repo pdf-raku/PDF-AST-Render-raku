@@ -25,5 +25,5 @@ my Pair:D $doc-ast =
 
 my PDF::API6 $pdf = PDF::Render.render($doc-ast, :%role-map);
 $pdf.id = $*PROGRAM.basename.fmt('%-16.16s');
-lives-ok { $pdf.save-as: "t/basic.pdf" };
+lives-ok { $pdf.save-as: "t/basic.pdf", :!info };
 

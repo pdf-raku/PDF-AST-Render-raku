@@ -107,7 +107,7 @@ method !paginate(
     }
 }
 
-method merge-batch( % ( :@toc!, :%index!, :$frag, :%info, :$pages ) ) {
+method merge-batch( % ( :@toc!, :%index!, :$frag, :%info (:$lang, *%meta), :$pages ) ) {
     @.toc.append: @toc;
     %.index ,= %index;
     with $frag {
@@ -115,13 +115,13 @@ method merge-batch( % ( :@toc!, :%index!, :$frag, :%info, :$pages ) ) {
             $.root.add-kid: :$node;
         }
     }
-    if %info {
+    $!pdf.Lang //= $_ with $lang;
+    if %meta {
         my $pdf-info = ($!pdf.Info //= {});
-        for %info.pairs {
-            $pdf-info{.key} //= .value;
+        for %meta.pairs {
+            $pdf-info{.key.tclc} //= .value;
         }
     }
-    .Lang = self.lang with $!root;
 }
 
 method pdf {
@@ -153,7 +153,9 @@ sub categorize-alphabetically(%index) {
 
 method lang is rw { $!pdf.catalog.Lang; }
 
-multi method render(::?CLASS:U: Any:D $xml where .isa("LibXML::Item"), |c) {
+my subset XMLish where .isa("LibXML::Item");
+
+multi method render(::?CLASS:U: XMLish:D $xml, |c) {
     self.new(|c).render($xml.ast);
 }
 
@@ -161,6 +163,7 @@ multi method render(::?CLASS:U: Pair:D $xml-ast, |c) {
     self.new(|c).render($xml-ast);
 }
 
+multi method render(::?CLASS:D: XMLish:D $xml, |c) { self.render($xml.ast, |c) }
 multi method render(::?CLASS:D: Pair:D $xml-ast, Bool :$index = True) {
     my PDF::Render::Tree $writer = self.writer;
     my Pair:D @content = $writer.process-root(|$xml-ast);
