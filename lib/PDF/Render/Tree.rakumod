@@ -141,7 +141,7 @@ my constant vpad = 2;
 my constant hpad = 10;
 
 # a simple algorithm for sizing table column widths
-sub fit-widths($width is copy, @widths) {
+sub fit-width(@widths, $width is copy) {
     my $cell-width = $width / +@widths;
     my @idx;
 
@@ -160,7 +160,7 @@ sub fit-widths($width is copy, @widths) {
             my $i = 0;
             @over[$_] := @widths[ @idx[$_] ]
                 for  ^+@idx;
-            fit-widths($width, @over);
+            @over.&fit-width($width);
         }
         else {
             $_ = $cell-width
@@ -247,9 +247,9 @@ method !add-row(@table, @tr) {
     @table.push: @row if @row;
 }
 
-method !build-table(@content, @table) {
+method !build-table(@content) {
     my $x0 = self!indent;
-    @table = ();
+    my @table = ();
 
     if self!deref(@content, TableHead) -> (@thead, %atts) {
         self!style: :tag(TableHead), :%atts, {
@@ -275,11 +275,12 @@ method !build-table(@content, @table) {
     }
 
     my $cols = @table.max: *.elems;
-    (^$cols).map: -> $col {
+    my @widths = (^$cols).map: -> $col {
         @table.map({
             do with .[$col] { with .value { .width }  } // 0
         }).max
-    };
+    }
+    @table, @widths;
 }
 
 method !deref(@content, Str:D $tag, Bool :$consume) {
@@ -322,8 +323,8 @@ multi method ast2pdf('Table', @content, *%atts) {
             }
         }
 
-        my @widths = self!build-table: @content, my @table;
-        fit-widths(total-width - @border[0] * (@widths-1), @widths);
+        my :(@table, @widths) := self!build-table: @content;
+        @widths.&fit-width(total-width - @border[0] * (@widths-1));
         if @table.shift.List -> @headers {
             self!table-row: @headers, @widths, :header, :@border;
         }
@@ -341,7 +342,7 @@ method !make-link(Str:D $url) {
     given $url {
         if .starts-with('#') {
             # internal link
-            my $destination = dest-name($_);
+            my $destination = .&dest-name;
             %style<link> = $!pdf.action: :$destination;
         }
         else {
@@ -351,24 +352,6 @@ method !make-link(Str:D $url) {
         }
     }
     %style;
-}
-
-sub signature2text($params, Mu $returns?) {
-    my constant NL = "\n    ";
-    my $result = '(';
-
-    if $params.elems {
-        $result ~= NL ~ $params.map(&param2text).join(NL) ~ "\n";
-    }
-    $result ~= ')';
-    unless $returns<> =:= Mu {
-        $result ~= " returns " ~ $returns.raku
-    }
-    $result;
-}
-
-sub param2text($p) {
-    $p.raku ~ ',' ~ ( $p.WHY ?? ' # ' ~ $p.WHY !! '')
 }
 
 multi method ast2pdf('Code', @content, *%atts where .<Placement> ~~ 'Block') {
@@ -384,7 +367,7 @@ multi method ast2pdf('Code', @content, *%atts where .<Placement> ~~ 'Block') {
 
 multi method ast2pdf('Span', @content, :role($)! where 'Index', :$Terms) {
   if @content.&text-content(:inline) -> $term {
-        my Str $name = dest-name($term);
+        my Str $name = $term.&dest-name;
 
         my DestRef $dest = self!ast2dest(@content, :$name);
         my PDF::StructElem $SE = $*tag.cos;
@@ -704,7 +687,7 @@ method !heading(@content is copy, Level:D :$level!, Bool :$toc = True, ) {
 
     if $!contents && $toc {
         # Register in table of contents
-        my $name = dest-name($Title);
+        my $name = $Title.&dest-name;
         my DestRef $dest = self!ast2dest(@content, :$name);
         my PDF::StructElem $SE = $*tag.cos;
         self.add-toc-entry: { :$Title, :$dest, :$SE  }, :$level;
